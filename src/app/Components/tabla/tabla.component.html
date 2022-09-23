@@ -1,0 +1,44 @@
+
+<div id="caja_tabla">
+    <table>
+        <thead>
+           <!-- <th>Ver</th> -->
+            <th><input type="checkbox"></th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </thead>
+
+        <tbody id="tabla">
+            <tr *ngFor="let cliente of arreglo_alta_get">
+                <td><input type="checkbox"></td>
+                <td>{{cliente.id}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellido}}</td>
+                <td>{{cliente.edad}}</td>
+                <td>{{cliente.correo}}</td>
+                <td>
+                    <button class="btnEliminar" style="height:22px; width:22px; 
+                    background-Image:url(assets/Icon_boton/eliminar.png); 
+                    background-Position:center; background-Repeat:no-repeat; background-Color:white; 
+                    border-Radius:15px; border-Color:red"></button>
+                </td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+    <button id="btn_final"></button>
+    <button id="btn_atras"></button>
+    <button id="btn_siguiente"></button>
+    <button id="btn_ultimo"></button>
+
+</div>
+
+  <!--<app-indicadores></app-indicadores>-->
+  <!--<app-modal-eliminar></app-modal-eliminar>-->
+  <!--<app-modal-datos></app-modal-datos>-->
+  <!--<app-modal-person></app-modal-person>-->
