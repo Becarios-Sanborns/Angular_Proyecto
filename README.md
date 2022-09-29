@@ -42,6 +42,7 @@ y por ende no abarcaba los campos de la tabla, este error fue arreglado desde el
 tabla con sentencias javascript para hacer corregir el error.
 
 #2, #3, #4
+
 Se inicio con habilitar a los elementos del componente "indicadores", el cual se pretende pasar el tamaño del 
 arreglo de objetos para poder mostrar en pantalla el total que hay. Comparti datos del componente padre (componente tabla) al componente 
 que deriva de él que es el componente hijo (componente indicadores) ocupando la misma logica de conexión que en los componentes
