@@ -41,6 +41,16 @@ modificó el diseño de la tabla, ya que había un error de diseño, el error es
 y por ende no abarcaba los campos de la tabla, este error fue arreglado desde el archivo registro(ts), llamando al div que abarca la
 tabla con sentencias javascript para hacer corregir el error.
 
+#2, #3, #4
+Se inicio con habilitar a los elementos del componente "indicadores", el cual se pretende pasar el tamaño del 
+arreglo de objetos para poder mostrar en pantalla el total que hay. Comparti datos del componente padre (componente tabla) al componente 
+que deriva de él que es el componente hijo (componente indicadores) ocupando la misma logica de conexión que en los componentes
+registro, app.component, tabla.
+
+Pero hay un error ya que al momento de agregar uno o incluso más de uno, el contador no cambia, sino que mantiene el valor estático
+desde que empieza la aplicación esta en ejecución.
+
+
 
 
 
