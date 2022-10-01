@@ -9,10 +9,7 @@ import { EventEmitter } from '@angular/core';
 })
 
 export class RegistroComponent {
-//implements OnInit {
 
-                   /* =====  VARIABLES ===== */
-  
    registro: Array<UsuarioDatos> = []; //Array donde se guardaran los elementos
 
    nombre_in! : String;
@@ -20,7 +17,7 @@ export class RegistroComponent {
    edad_in! : number;
    correo_in! : string;
    id : number = this.registro.length;
-
+   
    @Output() mensaje_registro = new EventEmitter< Array<UsuarioDatos> >();
 
   constructor() {}
@@ -57,8 +54,8 @@ export class RegistroComponent {
         }
   }
 
-  enviar_arreglo(e:Array<UsuarioDatos>){
-    this.mensaje_registro.emit(e);
+  enviar_arreglo(evt:Array<UsuarioDatos>){
+    this.mensaje_registro.emit(evt);
   }
 
   limpiar_campos(){

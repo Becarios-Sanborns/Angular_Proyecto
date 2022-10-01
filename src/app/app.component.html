@@ -1,14 +1,10 @@
 <section id="seccion">
-
   <!--<router-outlet></router-outlet>-->
   
       <!-- COMPONENTE HIJO -->
   <app-registro (mensaje_registro)="alta_tablas($event)"></app-registro>
-
   <app-buscador></app-buscador> 
-
       <!-- COMPONENTE HIJO -->
   <app-tabla [arreglo_alta_get]="mensaje"></app-tabla>
-  
   
 </section>

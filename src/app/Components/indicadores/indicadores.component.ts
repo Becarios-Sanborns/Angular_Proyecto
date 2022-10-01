@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { UsuarioDatos } from 'src/app/Interface/usuario-datos';
 
 @Component({
   selector: 'app-indicadores',
@@ -11,5 +13,7 @@ export class IndicadoresComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() contador_label! : number;
 
 }
