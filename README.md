@@ -51,7 +51,17 @@ registro, app.component, tabla.
 Pero hay un error ya que al momento de agregar uno o incluso más de uno, el contador no cambia, sino que mantiene el valor estático
 desde que empieza la aplicación esta en ejecución.
 
+#5, #6
 
+Se busco información en foros, videos y documentación para poder corregir este error, pero aun así no quedo muy claro. Aun seguía en 
+este detalle. Hize modificaciones al proyecto anterior que era lo de JavaScript.
+
+#7
+
+Despues de buscar información trate de pasarlo mediante "EventEmitter" pensando que sería el funcionamiento de manera correcta,
+pero aun tenía el detalle que no se modifica el número sino que al momento de que se ejecuta la aplicación, se imprime en consola 
+(impresión para prueba) el valor 0 en este caso, revisando videos tengo la sospecha que sea por el ciclo de vida de los componentes.
+Al estar atorado en este punto, volvi al proyecto anterior (Javascript) para completar lo que me falta de los checadores.
 
 
 
