@@ -63,10 +63,22 @@ pero aun tenía el detalle que no se modifica el número sino que al momento de 
 (impresión para prueba) el valor 0 en este caso, revisando videos tengo la sospecha que sea por el ciclo de vida de los componentes.
 Al estar atorado en este punto, volvi al proyecto anterior (Javascript) para completar lo que me falta de los checadores.
 
+# Semana 5
 
+#8
 
+Se vieron videos y se busco información referente al error que tengo, se implemento un observable para poder ver el cambio en el 
+componente hijo (componente indicadores), pero marcaba error de que el array que recibía era 'undefined', se implemento dentro del componente 
+registro y dentro del componente tabla.
 
+#9
 
+Se corrigio el error de indicadores, pasando como parametro el arreglo donde se guardaban los datos del registro dentro de la tabla,
+y se quito código que tenía como decorador '@output'. 
+
+Se corrigieron errores que al momento de ingresar datos al campo edad, al agregar un rango de edad mayor a 80 y mayor a 2 digitos, se 
+guardaba, tambíen cuando habia datos vacios en el campo 'apellido'. Se evaluaron las funciones donde se encontraban estas restricciones y
+se modificaron, quedando funcionables a los diferentes casos.
 
 
 
