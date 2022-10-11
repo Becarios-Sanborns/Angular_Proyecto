@@ -1,7 +1,10 @@
+.indicadores {
+    width: 500px;
+    height: 50px;
+    margin: -14.5em 30em;
+}
+
 #logo_contador {
-    position: absolute;
-    left: 480px;
-    bottom: 485px;
     width: 45px;
     height: 45px;
     background-image: url('src/assets/Icon_index/usuarios.png');
@@ -10,47 +13,38 @@
 }
 
 .contador {
-    position: absolute;
-    left: 530px;
-    bottom: 475px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
+    margin: -60px 50px;
 }
 
 #logo_paginas {
-    position: absolute;
-    left: 600px;
-    bottom: 485px;
     width: 45px;
     height: 45px;
     background-image: url('src/assets/Icon_index/page.png');
     background-position: center;
     background-repeat: no-repeat;
+    margin: 20px 8em;
 }
 
 .contador_pagina {
-    position: absolute;
-    left: 655px;
-    bottom: 475px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
+    margin: -65px 6em;
 }
 
 #logo_objetos {
-    position: absolute;
-    left: 750px;
-    bottom: 485px;
     width: 45px;
     height: 45px;
     background-image: url('src/assets/Icon_index/objetos_grupo.png');
     background-position: center;
     background-repeat: no-repeat;
+    margin: 25px 18em;
 }
 
 .contador_objetos {
-    position: absolute;
-    left: 810px;
-    bottom: 475px;
+    width: 200px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
+    margin: -65px 14em;
 }

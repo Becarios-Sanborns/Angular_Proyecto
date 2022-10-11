@@ -1,4 +1,3 @@
-
 <div id="caja_tabla">
     <table>
         <thead>
@@ -13,7 +12,7 @@
         </thead>
 
         <tbody id="tabla">
-            <tr *ngFor="let cliente of arreglo_alta_get">
+            <tr *ngFor="let cliente of arreglo_get">
                 <td><input type="checkbox"></td>
                 <td>{{cliente.id}}</td>
                 <td>{{cliente.nombre}}</td>
@@ -38,7 +37,7 @@
 
 </div>
 
-  <app-indicadores [contador_label]="contador_objetos"></app-indicadores>
+  <app-indicadores [contador_icono]="arreglo_get" [numero_pagina]="pagina_actual" ></app-indicadores>
   <!--<app-modal-eliminar></app-modal-eliminar>-->
   <!--<app-modal-datos></app-modal-datos>-->
   <!--<app-modal-person></app-modal-person>-->

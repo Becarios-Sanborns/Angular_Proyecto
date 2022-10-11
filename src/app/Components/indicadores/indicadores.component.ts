@@ -9,11 +9,11 @@ import { UsuarioDatos } from 'src/app/Interface/usuario-datos';
 })
 export class IndicadoresComponent implements OnInit {
 
+  @Input() contador_icono! :UsuarioDatos[]; //Arreglo que obtiene los datos del component Padre (component Tabla)
+  @Input() numero_pagina! :number;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  @Input() contador_label! : number;
+  ngOnInit(): void {}
 
 }

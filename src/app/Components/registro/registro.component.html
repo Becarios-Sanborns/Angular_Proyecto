@@ -1,11 +1,16 @@
-<p>Nombre:</p>
-<p>Apellidos:</p>
-<p>Edad:</p>
-<p>Correo:</p>
+<div class="registro-elementos">
+
+    <p>Nombre:</p>
+    <p>Apellidos:</p>
+    <p>Edad:</p>
+    <p>Correo:</p>
 
     <input id="nombre" [(ngModel)]="nombre_in" type="text" placeholder="Ingrese nombre..." required>
     <input id="apellido" [(ngModel)]="apellido_in" type="text" placeholder="Ingrese apellido..." required>
     <input id="edad" [(ngModel)]="edad_in" type="number" placeholder="18 - 80" min="18" max="80" maxlength="2" required>
     <input id="correo" [(ngModel)]="correo_in" type="email" placeholder="example@gmail.com" required>
 
-<button id="registrar" (click)="registro_altas()">Registrar</button>
+    <button id="registrar" (click)="registro_altas()">Registrar</button>
+
+</div>
+      

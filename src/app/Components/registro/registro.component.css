@@ -1,66 +1,72 @@
+.registro-elementos {
+    position: absolute;
+    width: 25em;
+    height: 20em;
+    margin: 8em 0px;
+}
+
 p {
-    position: relative;
-    padding: 4px;
-    top: 110px;
-    left: 10px;
+    display:list-item;
+    padding: 5px;
+    padding-left: 10px;
     font-family:'Times New Roman', Times, serif;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 500;
     font-style: italic;
 }
 
 #nombre {
     position: relative;
-    left: 125px;
-    bottom: 107px;
     width: 210px;
     height: 17px;
     border-radius: 50px;
     text-align: center;
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 120px;
+    bottom: 17.7em;
 }
 
 #apellido {
     position: relative;
-    left: -92px;
-    bottom: 52px;
     width: 210px;
     height: 17px;
     border-radius: 50px;
     text-align: center;
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 120px;
+    bottom: 14.8em;
 }
 
 #edad {
     position: relative;
-    left: -308px;
-    bottom: -5px;
     width: 100px;
     height: 17px;
     border-radius: 50px;
     text-align: center;
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 120px;
+    bottom: 12.1em;
 }
 
 #correo {
     position: relative;
-    left: -416px;
-    top: 60px;
     width: 210px;
     height: 17px;
     border-radius: 50px;
     text-align: center;
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px 120px;
+    bottom: 9.2em;
 }
 
 #registrar {
     position: absolute;
-    left: 190px;
-    top: 350px;
+    left: 150px;
+    top: 260px;
     width: 90px;
     height: 28px;
     text-align: center;

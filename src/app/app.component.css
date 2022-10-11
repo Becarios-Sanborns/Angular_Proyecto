@@ -1,9 +1,14 @@
-#seccion {
-    position: absolute;
+.elements-component-main {
+    background-color: red;
+    width: 84.4em;
+    height: 38.8em;
+    margin: -5px -8px;
+}
+
+.seccion-components {
     background-image: radial-gradient(circle at 50% -20.71%, #65ffff 0, 
     #6ddfff 25%, #6cb4d8 50%, #648ba4 75%, #566875 100%);
-    width: 101%;
-    height: 654px;
-    left: -7px;
-    top: -6px;
+    width: 84.39em;
+    height: 41.2em;
+    margin: -40.95em -7.8px;
 }

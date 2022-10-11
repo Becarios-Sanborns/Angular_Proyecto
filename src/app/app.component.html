@@ -1,10 +1,22 @@
-<section id="seccion">
-  <!--<router-outlet></router-outlet>-->
+
+<div class="elements-component-main"></div>
+
+  <section class="seccion-components">
+      <router-outlet></router-outlet>
+      
+            <!-- COMPONENTE HIJO -->
+     <app-registro (mensaje_registro)="alta_tablas($event)"></app-registro>
+      
+     <app-buscador></app-buscador>
+
+            <!-- COMPONENTE HIJO -->
+     <app-tabla [arreglo_get]="mensaje"></app-tabla>
+
+  </section>
+
   
       <!-- COMPONENTE HIJO -->
-  <app-registro (mensaje_registro)="alta_tablas($event)"></app-registro>
-  <app-buscador></app-buscador> 
-      <!-- COMPONENTE HIJO -->
-  <app-tabla [arreglo_alta_get]="mensaje"></app-tabla>
+  <!-- <app-tabla [arreglo_get]="mensaje"></app-tabla> 
   
 </section>
+-->
