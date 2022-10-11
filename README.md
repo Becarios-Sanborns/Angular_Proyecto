@@ -80,7 +80,7 @@ Se corrigieron errores que al momento de ingresar datos al campo edad, al agrega
 guardaba, tambíen cuando habia datos vacios en el campo 'apellido'. Se evaluaron las funciones donde se encontraban estas restricciones y
 se modificaron, quedando funcionables a los diferentes casos.
 
-#10, 11, 12
+#10, 11, 12, 13, 14
 
 Se empezó con intentar hacer la paginación para la tabla, se busco información y videos, referentes a 'ngOnChanges' para poder visualizar
 los cambios que recibe el arreglo de objetos, y cada cambio ir guardandolo en un arreglo en el componente hijo (componente tabla). Se implemento
