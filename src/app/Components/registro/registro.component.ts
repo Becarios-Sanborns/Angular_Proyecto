@@ -1,7 +1,8 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
 import { UsuarioDatos } from 'src/app/Interface/usuario-datos';
 import { EventEmitter } from '@angular/core';
-import { OnChanges } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { ObjetosService } from 'src/app/objetos.service';
 
 @Component({
   selector: 'app-registro',
@@ -11,7 +12,7 @@ import { OnChanges } from '@angular/core';
 
 export class RegistroComponent implements OnInit{
 
-   registro: Array<UsuarioDatos> = []; //Array donde se guardaran los elementos
+   registro: UsuarioDatos[] = []; //Array donde se guardaran los elementos
 
    @Output() mensaje_registro = new EventEmitter<Array<UsuarioDatos>>(); //Variable que sera enviada
 
@@ -21,8 +22,9 @@ export class RegistroComponent implements OnInit{
    correo_in! : string;
    id : number = this.registro.length;
 
-  constructor() {}
-  ngOnInit(): void { console.log("Init - Registro")}
+  constructor(private objetosSrv :ObjetosService){}
+
+  ngOnInit(): void {console.log("Init - Registro")}
 
   registro_altas(){
     let caja: HTMLElement | null = document.getElementById('caja_tabla') as HTMLDivElement;
@@ -38,18 +40,14 @@ export class RegistroComponent implements OnInit{
           correo: this.correo_in,
           select: false
         } 
-
           this.id++;
           this.registro.push(usuario);
-          
+          this.objetosSrv.guardarObjeto(usuario);
           this.enviar_arreglo(this.registro); //Método para enviar a otro componente
         
           caja.style.paddingBottom ="25px";
           caja.style.height = "auto";
-        
-          console.log("array:",this.registro);   
           this.limpiar_campos();
-
         }
   }
 

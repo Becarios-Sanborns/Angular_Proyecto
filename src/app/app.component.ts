@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { UsuarioDatos } from './Interface/usuario-datos';
 import { Input } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,14 @@ import { Input } from '@angular/core';
 export class AppComponent implements OnInit{ 
 
   title = 'Sistema angular';
-  
-  constructor(){}
-  ngOnInit(): void {console.log("Init - AppComponent")}
-
   @Input() mensaje : Array<UsuarioDatos> = [];
+
+  constructor(){}
+
+  ngOnInit(): void {}
 
   alta_tablas(cliente:Array<UsuarioDatos>){
     this.mensaje = cliente;
   }
-
-
 
 }

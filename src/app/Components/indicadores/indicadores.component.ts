@@ -9,8 +9,9 @@ import { UsuarioDatos } from 'src/app/Interface/usuario-datos';
 })
 export class IndicadoresComponent implements OnInit {
 
-  @Input() contador_icono! :UsuarioDatos[]; //Arreglo que obtiene los datos del component Padre (component Tabla)
-  @Input() numero_pagina! :number;
+  @Input() contador_icono! :UsuarioDatos[]; // Tamaño del arreglo (padre-tabla)
+  @Input() numero_pagina! :number;          // Pagina actual (padre-tabla)
+  @Input() total_paginas! :number;          // Total de paginas (padre-tabla)
 
   constructor() { }
 
