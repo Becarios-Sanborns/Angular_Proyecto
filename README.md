@@ -87,6 +87,9 @@ los cambios que recibe el arreglo de objetos, y cada cambio ir guardandolo en un
 'OnChanges' en la clase y el método para poder ver cambios. Pero solo funciona para cuando entran 2 objetos, después ya no se vuelve a ejecutar 
 las lineas de código del metodo onChanges. También ver videos de observables para poder intentarlo de esta manera.
 
+# Semana 6
+
+#15, #16, #17, #18, #19
 
 
 
