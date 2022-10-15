@@ -91,6 +91,31 @@ las lineas de código del metodo onChanges. También ver videos de observables p
 
 #15, #16, #17, #18, #19
 
+Se creó un servicio (objeto.service.ts) en donde se implementó una variable de tipo 'Subject' y un arreglo de tipo 'UsuarioDatos[]'
+para poder manipularse dentro de un método. Este método revise el objeto, que dentro del bloque se ira agregando al arreglo creado, también
+con la variable del subject, se hizo una llamada al método 'Next()'. Se creó otro método que sirve para poder ingresar al los elementos dentro
+del arreglo, el cual el arreglo se convierte en un 'Observable' con la llamada a 'asObsevable()'. 
+
+En el componente "registro.component" se implementó un objeto de la clase "objeto.service", para poder llamar el al método 'guardarObjeto()' que recibe como 
+parámetro al objeto que se esta creando. 
+
+En el componente "tabla.component" se implementó un objeto de la clase "objeto.service", para poder hacer una subscripción al método "devolverObjeto()" de la 
+clase service, en donde dentro de la estrcutura de este método, se creó un arreglo donde se iran guardando los cambios que se van haciendo en el arreglo original,
+el nuevo arreglo se implemento en el HTML del componente (tabla.component) y funcionaba correcto.
+
+#20
+
+Se implementó el método que controla el total páginas, también se paso hacia el componente indicadores, el cual funcionara para visualizar el total de páginas, se
+creó el código correspondiente para la paginación de la tabla, mandando un nuevo arreglo hacia el HTML de la tabla para que ingrese al "ngFor", el cual contiene
+el límite de objetos que estaran dentro de la tabla.Se crearon los siguiente métodos: inicio, anterior, siguiente, final. Que servirán para controlar la paginación
+de la tabla.
+
+
+
+
+
+
+
 
 
 
