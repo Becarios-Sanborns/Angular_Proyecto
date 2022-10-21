@@ -1,18 +1,15 @@
 <div id="modal_fondo">
     <div id="modal_datos">
         <div id="modal_titulo">
-            <p>¿Desea eliminar a empleado?</p>
+            <p>¿Desea eliminar al empleado?</p>
         </div>
         
-        <p id="id_modal">Id:1</p>
-        <p id="nombre_modal">Nombre:Diego</p>
-        <p id="apellido_modal">Apellido(s):Miranda</p>
-        <p id="edad_modal">Edad:21</p>
-        <p id="correo_modal">Correo:diegoimm@gmail.com</p>
+        <p id="id_modal">Id: {{nombre_imp.id}}</p>
+        <p id="nombre_modal">Nombre: {{nombre_imp.nombre +" "+nombre_imp.apellido}}</p>
 
-        <button id="aceptar_btn">Aceptar</button>
-        <button id="cancelar_btn">Cancelar</button>
-        <button id="cerrar_btn"></button>
+        <button id="aceptar_btn" >Aceptar</button>
+        <button id="cancelar_btn" (click)="cerrar()">Cancelar</button>
+        <button id="cerrar_btn" (click)="cerrar()"></button>
 
     </div>
 </div>

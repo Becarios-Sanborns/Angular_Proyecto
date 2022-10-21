@@ -20,10 +20,10 @@
                 <td>{{cliente.edad}}</td>
                 <td>{{cliente.correo}}</td>
                 <td>
-                    <button class="btnEliminar" style="height:22px; width:22px; 
+                    <button (click)="borrar(cliente)" style="height:22px; width:22px; 
                     background-Image:url(assets/Icon_boton/eliminar.png); 
                     background-Position:center; background-Repeat:no-repeat; background-Color:white; 
-                    border-Radius:15px; border-Color:red"></button>
+                    border-Radius:15px; border-Color:red" ></button>
                 </td>
             </tr>
         </tbody>
@@ -40,6 +40,7 @@
   <app-indicadores [contador_icono]="arreglo_get" [numero_pagina]="pagina_actual" 
   [total_paginas]="total_paginas()"></app-indicadores>
 
-  <!--<app-modal-eliminar></app-modal-eliminar>-->
+  <app-modal-eliminar *ngIf="visualizar==true" [nombre_imp]="objeto_out"
+    [ver]="cerrar_ventana()"></app-modal-eliminar>
   <!--<app-modal-datos></app-modal-datos>-->
   <!--<app-modal-person></app-modal-person>-->

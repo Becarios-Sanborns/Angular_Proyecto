@@ -16,9 +16,14 @@ export class TablaComponent implements OnInit{
   personas_pagina :number = 2;
   pagina_actual :number = 0;
   totalPaginas :number = 0;
-  arreglo_segmentado :UsuarioDatos[] = [];
+  posicion_inicio:number = 1;
 
-  arreglo_tabla:any[] = [];
+  arreglo_copia :UsuarioDatos[] = [];
+  arreglo_tabla :any[] = [];
+
+  objeto_out!:UsuarioDatos;
+  visualizar:boolean = false;
+
  
   constructor(private objetoSrv :ObjetosService){}
 
@@ -28,17 +33,18 @@ export class TablaComponent implements OnInit{
 
   ngOnInit():void{
     this.objetoSrv.devolverObjeto().subscribe(personas => {
-      this.arreglo_get = personas;
-      this.arreglo_segmentado = this.arreglo_get;
+      this.arreglo_tabla = personas;
+      
+      console.log("tb",this.arreglo_tabla);
     
-      if(this.totalPaginas+1 > 0){this.pagina_actual = 1;}
+      if(this.totalPaginas+1>0){this.pagina_actual = 1;}
 
-      this.totalPaginas = Math.ceil(this.arreglo_get.length/this.personas_pagina);
+      this.totalPaginas = Math.ceil(this.arreglo_tabla.length/this.personas_pagina);
 
       let arreglo :any[] = [];
 
-      for(let i=0;i<this.arreglo_segmentado.length;i+=this.personas_pagina){
-        arreglo.push(this.arreglo_segmentado.slice(i,i+this.personas_pagina));
+      for(let i=0;i<this.arreglo_tabla.length;i+=this.personas_pagina){
+        arreglo.push(this.arreglo_tabla.slice(i,i+this.personas_pagina));
       }
 
       this.arreglo_tabla = arreglo;
@@ -46,29 +52,52 @@ export class TablaComponent implements OnInit{
     });
   }
 
-    inicio() : void {
+  borrar(objeto:UsuarioDatos) :void{
+    let aux = 0;
+
+    this.visualizar = true;
+
+    this.objeto_out = objeto;
+
+    
+   /*  while(aux<this.arreglo_tabla[this.pagina_actual-1].length){
+      if(this.arreglo_tabla[this.pagina_actual-1][aux].id === objeto.id){
+        console.log("Encontrado",this.arreglo_tabla[this.pagina_actual-1][aux]);
+       this.objeto_out = this.arreglo_tabla[this.pagina_actual-1][aux];
+      }
+      aux++;
+     }*/
+
+  } 
+
+  cerrar_ventana():boolean{
+    return this.visualizar = false;
+  }
+
+    inicio() :void{
       this.pagina_actual = 1;
       console.log("Inicio",this.pagina_actual);
     }
 
-    anterior() : void {
+    anterior() :void{
       if(this.pagina_actual > 1){
       this.pagina_actual--;
       console.log("Anterior",this.pagina_actual);
       }
     }
 
-    siguiente() : void {
+    siguiente() :void{
       if(this.pagina_actual < this.totalPaginas){
       this.pagina_actual++;
       console.log("Siguiente",this.pagina_actual);
       }
     }
 
-    final() : void {
+    final() :void{ 
       this.pagina_actual = this.totalPaginas;
       console.log("Final",this.pagina_actual);
     }
 
-
+      
+   
 }
