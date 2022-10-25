@@ -12,7 +12,7 @@
         </thead>
 
         <tbody id="tabla">
-            <tr *ngFor="let cliente of arreglo_tabla[pagina_actual-1]">
+            <tr *ngFor="let cliente of arreglo_tabla[pagina_actual-1]; index as i">
                 <td><input type="checkbox"></td>
                 <td>{{cliente.id}}</td>
                 <td>{{cliente.nombre}}</td>
@@ -20,7 +20,7 @@
                 <td>{{cliente.edad}}</td>
                 <td>{{cliente.correo}}</td>
                 <td>
-                    <button (click)="borrar(cliente)" style="height:22px; width:22px; 
+                    <button (click)="borrar(cliente,i)" style="height:22px; width:22px; 
                     background-Image:url(assets/Icon_boton/eliminar.png); 
                     background-Position:center; background-Repeat:no-repeat; background-Color:white; 
                     border-Radius:15px; border-Color:red" ></button>
@@ -40,7 +40,10 @@
   <app-indicadores [contador_icono]="arreglo_get" [numero_pagina]="pagina_actual" 
   [total_paginas]="total_paginas()"></app-indicadores>
 
-  <app-modal-eliminar *ngIf="visualizar==true" [nombre_imp]="objeto_out"
-    [ver]="cerrar_ventana()"></app-modal-eliminar>
+  <app-modal-eliminar *ngIf="visualizar" [nombre_imp]="objeto_out"
+  (comprobarEvent)="cerrar_ventana($event)"></app-modal-eliminar>
   <!--<app-modal-datos></app-modal-datos>-->
-  <!--<app-modal-person></app-modal-person>-->
+  <!--<app-modal-person></app-modal-person>
+    true = oculto
+    false = visible
+-->

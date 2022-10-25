@@ -43,12 +43,15 @@ export class RegistroComponent implements OnInit{
           this.id++;
           this.registro.push(usuario);
           this.objetosSrv.guardarObjeto(usuario);
+
           this.enviar_arreglo(this.registro); //Método para enviar a otro componente
         
           caja.style.paddingBottom ="25px";
           caja.style.height = "auto";
           this.limpiar_campos();
         }
+        
+        console.log(this.registro);
   }
 
   enviar_arreglo(evt:Array<UsuarioDatos>){
