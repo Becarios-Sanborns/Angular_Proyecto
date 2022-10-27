@@ -7,7 +7,7 @@ import { UsuarioDatos } from './Interface/usuario-datos';
 })
 export class ObjetosService {
 
-  private array_guardar : UsuarioDatos[];
+   array_guardar : UsuarioDatos[];
   private observable$ : Subject<UsuarioDatos[]>;
 
   constructor() { 
@@ -17,6 +17,7 @@ export class ObjetosService {
 
   guardarObjeto(persona:UsuarioDatos){
     this.array_guardar.push(persona);
+    console.log("Service",this.array_guardar);
     this.observable$.next(this.array_guardar);
   }
 

@@ -41,7 +41,8 @@
   [total_paginas]="total_paginas()"></app-indicadores>
 
   <app-modal-eliminar *ngIf="visualizar" [nombre_imp]="objeto_out"
-  (comprobarEvent)="cerrar_ventana($event)"></app-modal-eliminar>
+  (comprobarEvent)="cerrar_ventana($event)"
+  (compruebaEliminar)="comprobarEliminar($event)"></app-modal-eliminar>
   <!--<app-modal-datos></app-modal-datos>-->
   <!--<app-modal-person></app-modal-person>
     true = oculto

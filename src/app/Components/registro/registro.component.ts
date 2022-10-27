@@ -50,8 +50,6 @@ export class RegistroComponent implements OnInit{
           caja.style.height = "auto";
           this.limpiar_campos();
         }
-        
-        console.log(this.registro);
   }
 
   enviar_arreglo(evt:Array<UsuarioDatos>){

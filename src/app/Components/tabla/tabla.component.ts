@@ -18,9 +18,12 @@ export class TablaComponent implements OnChanges{
   totalPaginas :number = 0; //Total de paginas
 
   arreglo_tabla :any[] = [];
+  arreglo_ex :any[]=[];
 
   objeto_out!:UsuarioDatos; //Objeto a enviar para modal
   visualizar:boolean = false; 
+  @Input() aceptarEmitter!:boolean;
+  tiempo!:boolean;
 
   constructor(private objetoSrv :ObjetosService){}
 
@@ -30,7 +33,8 @@ export class TablaComponent implements OnChanges{
 
   ngOnChanges():void{
     this.objetoSrv.devolverObjeto().subscribe(personas => {
-      
+
+      this.arreglo_ex = this.objetoSrv.array_guardar;
       this.arreglo_tabla = personas;
     
       if(this.totalPaginas+1>0){this.pagina_actual = 1;}
@@ -42,13 +46,15 @@ export class TablaComponent implements OnChanges{
       for(let i=0;i<this.arreglo_tabla.length;i+=this.personas_pagina){
         arreglo.push(this.arreglo_tabla.slice(i,i+this.personas_pagina));
       }
-     
+    
       this.arreglo_tabla = arreglo;
+
+      console.log("Tb",this.arreglo_tabla);
 
     });
 
-   
-  }
+
+  } 
 
   borrar(objeto:UsuarioDatos,index:number) :void{
     let i = 0; 
@@ -56,17 +62,24 @@ export class TablaComponent implements OnChanges{
     this.objeto_out = objeto; //Objeto de salida hacia otro componente
     let posicionPersona = index;
 
-   // console.log("antes",this.arreglo_tabla);
+   // if(this.aceptarEmitter == true){
+      while(i<this.arreglo_tabla[this.pagina_actual-1].length){
+          if(this.arreglo_tabla[this.pagina_actual-1][i].id === objeto.id){
+                console.log(posicionPersona);
+                this.arreglo_tabla[this.pagina_actual-1].splice(posicionPersona,1);
+                this.arreglo_get.splice(posicionPersona,1);
+                this.arreglo_ex.splice(posicionPersona,1);
+            }
+                i++;
+      }
+    //}
 
-    while(i<this.arreglo_tabla[this.pagina_actual-1].length){
-      if(this.arreglo_tabla[this.pagina_actual-1][i].id === objeto.id){
-          console.log(posicionPersona);
-          this.arreglo_tabla[this.pagina_actual-1].splice(posicionPersona,1);
-          this.arreglo_get.splice(posicionPersona,1);
-        }
-      i++;
-     }
   } 
+
+  comprobarEliminar(event:boolean){
+    this.aceptarEmitter = event;
+    console.log("met",this.aceptarEmitter); //imprime true
+  }
 
   cerrar_ventana(event:boolean){
     this.visualizar = event;

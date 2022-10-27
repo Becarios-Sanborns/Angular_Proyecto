@@ -11,7 +11,7 @@ import { Input } from '@angular/core';
 export class AppComponent implements OnChanges{ 
   title = 'Sistema angular';
 
-  @Input() mensaje : Array<UsuarioDatos> = [];
+  @Input() arreglo_enviar : Array<UsuarioDatos> = [];
 
   constructor(){}
 
@@ -19,7 +19,8 @@ export class AppComponent implements OnChanges{
   }
 
   alta_tablas(cliente:Array<UsuarioDatos>){
-    this.mensaje = cliente;
+    this.arreglo_enviar = cliente;
+    console.log("appComponent",this.arreglo_enviar);
   }
 
 }
