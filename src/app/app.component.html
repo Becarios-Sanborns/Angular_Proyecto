@@ -4,13 +4,16 @@
   <section class="seccion-components">
       <router-outlet></router-outlet>
       
-            <!-- COMPONENTE HIJO -->
-     <app-registro (mensaje_registro)="alta_tablas($event)"></app-registro>
-      
+            <!-- COMPONENTE HIJO 
+     <app-registro (mensaje_registro)="alta_tablas($event)"></app-registro> -->
+
+     <app-registro></app-registro> 
+
      <app-buscador></app-buscador>
 
             <!-- COMPONENTE HIJO -->
      <app-tabla [arreglo_get]="arreglo_enviar"></app-tabla>
+            
 
   </section>
 

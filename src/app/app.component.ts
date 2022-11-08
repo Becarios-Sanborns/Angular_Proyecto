@@ -16,11 +16,12 @@ export class AppComponent implements OnChanges{
   constructor(){}
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log("send",this.arreglo_enviar);
   }
 
-  alta_tablas(cliente:Array<UsuarioDatos>){
+ /* alta_tablas(cliente:Array<UsuarioDatos>){
     this.arreglo_enviar = cliente;
     console.log("appComponent",this.arreglo_enviar);
-  }
+  }*/
 
 }

@@ -37,12 +37,16 @@
 
 </div>
 
-  <app-indicadores [contador_icono]="arreglo_get" [numero_pagina]="pagina_actual" 
-  [total_paginas]="total_paginas()"></app-indicadores>
+  <app-indicadores [contador_icono]="arreglo_ex" [numero_pagina]="pagina_actual" 
+  [total_paginas]="totalPaginas"></app-indicadores>
 
-  <app-modal-eliminar *ngIf="visualizar" [nombre_imp]="objeto_out"
+ <app-modal-eliminar *ngIf="visualizar"
+  [nombre_imp]="objeto_out"
+  [pagina]="pagina_actual"
+  [posicionObjeto]="posicionPersona"
+  [arreglo]="arreglo_tabla"
   (comprobarEvent)="cerrar_ventana($event)"
-  (compruebaEliminar)="comprobarEliminar($event)"></app-modal-eliminar>
+  ></app-modal-eliminar>
   <!--<app-modal-datos></app-modal-datos>-->
   <!--<app-modal-person></app-modal-person>
     true = oculto

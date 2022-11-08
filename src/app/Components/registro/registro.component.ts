@@ -41,10 +41,10 @@ export class RegistroComponent implements OnInit{
           select: false
         } 
           this.id++;
-          this.registro.push(usuario);
+       //   this.registro.push(usuario);
           this.objetosSrv.guardarObjeto(usuario);
 
-          this.enviar_arreglo(this.registro); //Método para enviar a otro componente
+        //  this.enviar_arreglo(this.registro); //Método para enviar a otro componente
         
           caja.style.paddingBottom ="25px";
           caja.style.height = "auto";
@@ -52,9 +52,9 @@ export class RegistroComponent implements OnInit{
         }
   }
 
-  enviar_arreglo(evt:Array<UsuarioDatos>){
+ /* enviar_arreglo(evt:Array<UsuarioDatos>){
     this.mensaje_registro.emit(evt);
-  }
+  }*/
 
   limpiar_campos(){
     this.nombre_in = "";
